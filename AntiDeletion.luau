@@ -1,0 +1,1 @@
+return function(p) local pos=Vector3.new(0,0,0)while true do local a,b=pcall(function() p.Character.Parent = workspace pos=p.Character:GetPivot() end) if not a then p:LoadCharacterAsync() p.Character:PivotTo(pos)end task.wait() end end
