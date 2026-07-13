@@ -5,6 +5,7 @@ local function pprint(...)
 end
 return function(p)
   pprint("This script still currently under construction, please expect the script to not function properly")
+  pprint("Giving access to "..p.Name.."...")
   local banlist = {}
   game.Players.PlayerAdded:Connect(function(paa)
     if table.find(banlist,paa.UserId) then paa:Kick("Banned") end
