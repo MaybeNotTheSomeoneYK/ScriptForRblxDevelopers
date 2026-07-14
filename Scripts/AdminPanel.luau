@@ -3,7 +3,7 @@ local function pprint(...)
   local str = table.concat({...}," ")
   print("\n\n\n"..(prefix and prefix or "[MNTSYKScripts]\n")..str.."\n\n\n")
 end
-local function getplr(name:string)
+local function getplr(name)
   if not name then return end
   if typeof(name)=="Instance" then return name end
   if game.Players:FindFirstChild(name) then
