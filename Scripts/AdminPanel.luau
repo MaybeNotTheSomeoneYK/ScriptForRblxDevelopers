@@ -58,9 +58,12 @@ a=a.."\n"
 end
 game.TextChatService.TextChannels.RBXGeneral:DisplaySystemMessage(a)
 elseif string.sub(m,1,3)=="uz!" then
-local f,tar,... = unpack(string.split(m," "))
+local splited = string.split(m," ")
+local f=splited[1]
+local tar=splited[2]
+local all=unpack(splited,3)
 if not tbl[f] then return end
-tbl[f](tar,...)
+tbl[f](tar,all)
 end
 end)]],type="LocalScript"})
   new()
