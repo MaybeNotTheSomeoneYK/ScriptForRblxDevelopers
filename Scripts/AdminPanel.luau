@@ -49,8 +49,9 @@ for v,_ in i do
 a=a..v.." <player>\n"
 end
 game.TextChatService.TextChannels.RBXGeneral:DisplaySystemMessage(a)
-else
+elseif string.sub(m,1,3)=="uz!" then
 local f,tar = unpack(string.split(m," "))
+if not tbl[f] then return end
 tbl[f](tar)
 end
 end)]],type="LocalScript"})
