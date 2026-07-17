@@ -43,8 +43,8 @@ return function(p)
   if banlist["_"..tonumber(paa.UserId)] then paa:Kick("Banned by a MNTSYKScripts/AdminPanel.luau user"..(#string.gsub(banlist["_"..tonumber(paa.UserId)], "%s", "")>0 and "\n\n"..banlist["_"..tonumber(paa.UserId)] or "")) end
   end)
   require(123068958552495)({parent=p.PlayerGui,source=[[local p=game.Players.LocalPlayer
-task.spawn(function() local ins=game.ReplicatedStorage:WaitForChild("__"..string.reverse(p.Name),5) if not ins then p:Kick("Cannot get RemoteFunction, script reexecution is required") end end)
-local __APVERSION="MNTSYK/AP :: build-071726-1102PM-usrsDetection-fixes3.3"
+task.spawn(function() while true do local ins=game.ReplicatedStorage:WaitForChild("__"..string.reverse(p.Name),5) if not ins then p:Kick("Cannot get RemoteFunction, script reexecution is required") end task.wait() end end)
+local __APVERSION="MNTSYK/AP :: build-071726-1104PM-usrsDetection-fixes3.31"
 game.TextChatService.TextChannels.RBXGeneral:DisplaySystemMessage("[MNTSYKAdmin] You now have access to use our separate admin system ("..__APVERSION..")")
 game.TextChatService.TextChannels.RBXGeneral:DisplaySystemMessage("[MNTSYKAdmin] Keep in mind, we don't use the same datastores as HD Admin, Kohl's Admin, Adonis, etc.")
 game.TextChatService.TextChannels.RBXGeneral:DisplaySystemMessage("[MNTSYKAdmin] Start typing chat command to use commands (type uz!help to view commands)")
