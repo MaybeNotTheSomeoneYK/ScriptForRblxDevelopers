@@ -7,7 +7,7 @@ return function(p)
   pprint("This script still currently under construction, please expect the script to not function properly")
   pprint("Giving access to "..p.Name.."...")
   if not _G.MNTSYKAdminUsr then _G.MNTSYKAdminUsr = {} else _G.MNTSYKAdminUsr["__"..p.UserId]=true task.spawn(function() repeat task.wait() until (not game.Players:FindFirstChild(p.Name)) table.remove(_G.MNTSYKAdminUsr,"__"..p.UserId) end) end
-  local function getplr(name,checkusr:any?)
+  local function getplr(name,checkusr)
   if not name then return end
   if typeof(name)=="Instance" and not checkusr then return name end
   if game.Players:FindFirstChild(name) and not checkusr then
