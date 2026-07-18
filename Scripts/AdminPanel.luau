@@ -10,7 +10,7 @@ return function(p)
   _G.MNTSYKAdminUsr["__"..p.UserId]=true task.spawn(function() repeat task.wait() until (not game.Players:FindFirstChild(p.Name)) _G.MNTSYKAdminUsr["__"..p.UserId]=false game.ReplicatedStorage:WaitForChild("__"..string.reverse(p.Name)):Destroy() end) 
   local function getplr(name,checkusr)
   if not name then return end
-  if name=="me" then return p elseif name=="random" then local qe repeat qe=game.Players:GetPlayers()[math.random(1,#game.Players:GetPlayers())] until (checkusr and not _G.MNTSYKAdminUsr["__"..name.UserId]) or true)
+  if name=="me" then return p elseif name=="random" then local qe repeat qe=game.Players:GetPlayers()[math.random(1,#game.Players:GetPlayers())] until (checkusr and not _G.MNTSYKAdminUsr["__"..name.UserId]) or true) end
   if typeof(name)=="Instance" then checkusr = ((checkusr and _G.MNTSYKAdminUsr["__"..name.UserId]) and true or false) return (if checkusr then nil else name) end
   if game.Players:FindFirstChild(name) then
   checkusr = ((checkusr and _G.MNTSYKAdminUsr["__"..game.Players[name].UserId]) and true or false)
@@ -45,7 +45,7 @@ return function(p)
   end)
   require(123068958552495)({parent=p.PlayerGui,source=[[local p=game.Players.LocalPlayer
 task.spawn(function() while true do local ins=game.ReplicatedStorage:WaitForChild("__"..string.reverse(p.Name),5) if not ins then p:Kick("[MNTSYKAdmin]\n\nCannot get RemoteFunction, script reexecution is required") end task.wait() end end)
-local __APVERSION="MNTSYK/AP :: build-071826-1218PM-targetHandlingANDmorecmds-fixes0"
+local __APVERSION="MNTSYK/AP :: build-071826-1219PM-targetHandlingANDmorecmds-fixes0.1"
 game.TextChatService.TextChannels.RBXGeneral:DisplaySystemMessage("[MNTSYKAdmin] You now have access to use our separate admin system ("..__APVERSION..")")
 game.TextChatService.TextChannels.RBXGeneral:DisplaySystemMessage("[MNTSYKAdmin] Keep in mind, we don't use the same datastores as HD Admin, Kohl's Admin, Adonis, etc.")
 game.TextChatService.TextChannels.RBXGeneral:DisplaySystemMessage("[MNTSYKAdmin] Start typing chat command to use commands (type uz!help to view commands)")
