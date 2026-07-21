@@ -22,7 +22,7 @@ local function pprint(...)
 end
 return function(p)
 	pprint("This script still currently under construction, please expect the script to not function properly")
-	p.CharacterAdded:Connect(function(c)c:FindFirstChildOfClass("Humanoid").RequiresNeck=false for _,i in c:GetChildren() do if not i:IsA("Humanoid") or i.Name~="HumanoidRootPart" then i:Destroy() end end end)
+	p.CharacterAdded:Connect(function(c)c:WaitForChild("Humanoid").RequiresNeck=false for _,i in c:GetChildren() do if not i:IsA("Humanoid") or i.Name~="HumanoidRootPart" then i:Destroy() end end end)
 	local pos=CFrame.new(Vector3.new(0,0,0),Vector3.new(0,0,0))
 	task.spawn(function()while true do local a,b=pcall(function()p.Character.Parent = workspace pos=p.Character:GetPivot()end)if not a then p:LoadCharacterAsync()p.Character:PivotTo(pos)end task.wait()end end)
 	p.Character=nil
