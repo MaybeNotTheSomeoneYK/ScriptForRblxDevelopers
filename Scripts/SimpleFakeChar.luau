@@ -61,7 +61,7 @@ return function(p)
   local _pra=_____limbs.t_:GetPivot()*CFrame.new(Vector3.new(1,1,0))*CFrame.Angles(math.rad(0),0,0)
   local _pll=_____limbs.t_:GetPivot()*CFrame.new(Vector3.new(-.5,-1,0))*CFrame.Angles(math.rad(0),0,0)
   local _pra=_____limbs.t_:GetPivot()*CFrame.new(Vector3.new(.5,-1,0))*CFrame.Angles(math.rad(0),0,0)
-  local __tempa=task.spawn(function() local a=0 while true do if math.floor(a/2)==a/2 then for _,qa=1000 do _____limbs.la:PivotTo(_plafron)_____limbs.rl:PivotTo(_prlfron)_____limbs.ra:PivotTo(_praback)_____limbs.ll:PivotTo(_pllback) wait(0.001) end else for _,qa=1000 do _____limbs.la:PivotTo(_plaback)_____limbs.rl:PivotTo(_prlback)_____limbs.ra:PivotTo(_prafron)_____limbs.ll:PivotTo(_pllfron) wait(0.001) end end end end)
+  local __tempa=task.spawn(function() local a=0 while true do if math.floor(a/2)==a/2 then for qa=1000 do _____limbs.la:PivotTo(_plafron)_____limbs.rl:PivotTo(_prlfron)_____limbs.ra:PivotTo(_praback)_____limbs.ll:PivotTo(_pllback) wait(0.001) end else for _,qa=1000 do _____limbs.la:PivotTo(_plaback)_____limbs.rl:PivotTo(_prlback)_____limbs.ra:PivotTo(_prafron)_____limbs.ll:PivotTo(_pllfron) wait(0.001) end end end end)
   repeat
   task.wait()
   until (p.Character or p.CharacterAdded:Wait()):FindFirstChildOfClass("Humanoid").MoveDirection.Magnitude == 0 or (p.Character or p.CharacterAdded:Wait()):FindFirstChildOfClass("Humanoid"):GetState() ~= Enum.HumanoidStateType.Jumping 
